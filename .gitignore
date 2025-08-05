@@ -90,7 +90,7 @@ celerybeat.pid
 
 ### IDE & Editor Config ###
 # VS Code
-.vscode/
+# .vscode/
 .devcontainer/
 
 # JetBrains / PyCharm
@@ -173,3 +173,20 @@ outputs/
 
 # Dev folders
 .cache/*
+
+.png
+.jpg
+
+*.safetensors
+*.gif
+*.webp
+*.mov
+*.mp4
+
+models
+
+sampleRecord
+deploy_record
+sampleRecord_2
+sampleRecord_opencv
+sampleRecord_opencv_2
