@@ -177,7 +177,14 @@ def init_keyboard_listener():
 
 
 def sanity_check_dataset_name(repo_id, policy_cfg):
-    _, dataset_name = repo_id.split("/")
+    # 处理本地绝对路径
+    from pathlib import Path
+    if repo_id.startswith("/"):
+        dataset_name = Path(repo_id).name
+    else:
+        # 处理 HF Hub 格式的 repo_id
+        _, dataset_name = repo_id.split("/")
+        
     # either repo_id doesnt start with "eval_" and there is no policy
     # or repo_id starts with "eval_" and there is a policy
 
